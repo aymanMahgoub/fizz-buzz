@@ -1,0 +1,30 @@
+{
+  "name": "ayman/fizz-buzz",
+  "description": "Fizz buzz game",
+  "authors": [
+    {
+      "name": "Ayman Ibrahim",
+      "email": "ayman.mahgoub1@gmail.com"
+    }
+  ],
+  "homepage": "https://github.com/aymanMahgoub/fizz-buzz",
+  "autoload": {
+    "psr-4": {
+      "": "src/App"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "FizzBuzz\\tests\\": "tests"
+    }
+  },
+  "require": {
+    "php": "^7.1"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^7.1"
+  },
+  "scripts": {
+    "test": "phpunit"
+  }
+}
