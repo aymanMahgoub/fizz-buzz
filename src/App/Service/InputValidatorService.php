@@ -6,12 +6,24 @@ use InvalidArgumentException;
 
 class InputValidatorService
 {
+    /**
+     * @param int $fromNumber
+     * @param int $toNumber
+     * @throws InvalidArgumentException
+     * @return void
+     */
     public function validateUserInput($fromNumber, $toNumber): void
     {
         $this->validateIsNumber($fromNumber, $toNumber);
         $this->validateCorrectNumbersRange($fromNumber, $toNumber);
     }
 
+    /**
+     * @param $fromNumber
+     * @param $toNumber
+     * @throws InvalidArgumentException
+     * @return void
+     */
     private function validateIsNumber($fromNumber, $toNumber): void
     {
         if (!is_numeric($fromNumber) || !is_numeric($toNumber)) {
@@ -19,6 +31,12 @@ class InputValidatorService
         }
     }
 
+    /**
+     * @param int $fromNumber
+     * @param int $toNumber
+     * @throws InvalidArgumentException
+     * @return void
+     */
     private function validateCorrectNumbersRange(int $fromNumber, int $toNumber): void
     {
         if ($fromNumber <= 0 || $toNumber <= 0 || ($fromNumber >= $toNumber)) {
